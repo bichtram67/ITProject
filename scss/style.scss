@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
+@import "_flex";
+@import "_animation";
+
+body,
+html,
+p {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+$primaryColor: #ba933e;
+$secondColor: whitesmoke;
+$primaryFont: 'Red Hat Display',
+sans-serif;
+
+header {
+    .main_header {
+        padding: 20px 0;
+        background-color: whitesmoke;
+        font-size: 14px;
+
+        .container-header {
+            max-width: 1450px;
+            margin: 0 auto;
+            color: #444;
+
+            i {
+                color: #666;
+            }
+
+            a {
+                color: #444;
+                font-family: $primaryFont;
+            }
+
+            .info {
+                li {
+                    margin-right: 40px;
+
+                }
+            }
+
+
+
+            .menu {
+                li {
+                    margin-left: 20px;
+                }
+            }
+
+            p {
+                a {
+                    padding: 3px 8px;
+                    background: $primaryColor;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.slider {
+    .owl-carousel.owl-theme {
+        &:hover {
+            .owl-nav {
+                display: flex;
+                button{
+                    background: none;
+                }
+            }
+
+        }
+    }
+
+    .item{
+        position: relative;
+        font-family: 'Cabin Condensed', sans-serif;
+        .content{
+            position: absolute;
+            bottom: 50%;
+            left: 10%;
+            transform: translateY(50%);
+            p{
+                font-size: 18px;
+                font-weight: bold;
+                color: #444;
+                margin-bottom: 10px;
+                span{
+                    color: $primaryColor;
+                }
+
+            }
+            h3{
+                font-size: 40px;
+              
+
+            }
+            a{
+                display: inline-block;
+                padding: 13px 23px;
+                background: black;
+                color: white;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-top: 10px;
+                font-size: 13px;
+                transition: all .3s;
+                &:hover{
+                    background: $primaryColor;
+                }
+            }
+            
+        }
+    }
+   
+        
+        img{
+            width: 100%;
+            
+        }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 35px;
+            color: black;
+
+
+        }
+
+        .owl-dot.active span {
+            background: whitesmoke !important;
+            border: 2px solid $primaryColor;
+        }
+
+        .owl-dot span {
+            background: $primaryColor !important;
+          
+        }
+
+        .owl-dots {
+            position: absolute;
+            right: 50%;
+            bottom: 20px;
+        }
+        
+        .owl-nav {
+            // z-index: 2;
+            display: none;
+            transition: all .3s;
+
+            button {
+                background: none;
+               // color: #1a1a1a;
+            }
+        }
+
+        .owl-prev span {
+            margin-left: 20px;
+            font-size: 15px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid white;
+            transition: all .3s;
+            background: white;
+
+
+            &:hover {
+                background: $primaryColor;
+                border: 1px solid $primaryColor;
+            }
+
+        }
+
+        .owl-next span {
+            margin-right: 20px;
+            font-size: 15px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid white;
+            transition: all .3s;
+            background: white;
+
+
+            &:hover {
+                background: $primaryColor;
+                border: 1px solid $primaryColor;
+            }
+        }
+    
+}
