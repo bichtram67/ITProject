@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
-@import "_flex";
-@import "_animation";
+@import "flex";
+@import "animation";
+@import "grid";
+
 
 body,
 html,
@@ -12,8 +14,8 @@ p {
 
 $primaryColor: #ba933e;
 $secondColor: whitesmoke;
-$primaryFont: 'Red Hat Display',
-sans-serif;
+$primaryFont: 'Red Hat Display', sans-serif;
+
 
 header {
     .main_header {
@@ -25,6 +27,14 @@ header {
             max-width: 1450px;
             margin: 0 auto;
             color: #444;
+            ul{
+                li,a,i{
+                    transition: all .3s;
+                    &:hover{
+                        color: $primaryColor;
+                    }
+                }
+            }
 
             i {
                 color: #666;
@@ -138,6 +148,8 @@ header {
         .owl-dot.active span {
             background: whitesmoke !important;
             border: 2px solid $primaryColor;
+            width: 15px;
+            height: 15px;
         }
 
         .owl-dot span {
@@ -149,6 +161,9 @@ header {
             position: absolute;
             right: 50%;
             bottom: 20px;
+            display: flex;
+            align-items: center;
+         
         }
         
         .owl-nav {
@@ -204,3 +219,173 @@ header {
         }
     
 }
+
+.main-container{
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.banner{
+    margin: 80px auto;
+    .main-container{
+        #hover-banner{
+            .item{
+                height: 300px;
+                display: inline-block;
+                position: relative;
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        transform: scaleX(0);
+                    }
+                    &::before{
+                        opacity: 1;
+                        transform: scaleY(0);
+                    }
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(#fff,0.3);
+                    opacity: 0;
+                    transition: all .5s;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(#fff,0.3);
+                    opacity: 0;
+                    transition: all .5s;
+                }
+            }
+        }
+        .item{
+            font-family: $primaryFont;
+
+            position: relative;
+            img{
+                width: 100%;
+                height: 300px;
+            }
+            .content{
+                font-weight: bold;
+                position: absolute;
+                top: 55px;
+                left: 40px;
+                a{
+                    font-family: $primaryFont;
+                    color: black;
+                    font-size: 20px;
+                }
+                h4{
+                    margin-bottom: 5px;
+                }
+                span{
+                    color: $primaryColor;
+                    font-size: 15px;
+                }
+            }
+       }
+    }
+}
+
+.banner-collection{
+    .img{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .content{
+
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%,50%);
+            text-align: center;
+            color: #444;
+
+            #price{
+                font-weight: bold;
+                font-size: 25px;
+                margin-bottom: 10px;
+
+                span{
+                    color: #ba933e;
+                }
+            }
+
+            h2{
+                font-size: 50px;
+                color: black;
+            }
+
+            a{
+                padding: 12px 23px;
+                color: white;
+                font-size:18px;
+                font-weight: bold;
+                background: #000;
+                display: inline-block;
+                margin: 20px auto;
+                border-radius: 5px;
+                font-family: $primaryFont;
+                transition: all .5s;
+                &:hover{
+                    background:$primaryColor;
+                }
+            }
+            i{
+                margin-left: 15px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.subcribe{
+ // position: relative;
+ height: 500px;
+    background-image: url(../images/bg-newsleter-fashion-1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+
+    .form{
+        
+
+        width: 870px;
+        height: 220px;
+        background: rgba(#fff,0.8);
+        border-radius: 2px;
+    //    padding: 30px 50px;
+        .content{
+            p{
+                margin: 10px auto;
+            }
+            h3{
+                font-size: 35px;
+            }
+            .search{
+                input{
+                    border: 2px solid #e5e5e5;
+                    padding: 10px 100px 10px 5px;
+                    border-radius: 3px;
+                    flex-grow: 2;
+                }
+               
+                
+            }
+        }
+    }
+}
+
