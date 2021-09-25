@@ -71,6 +71,152 @@ header {
             }
         }
     }
+
+    .main-nav{
+        height: 85px;
+        .container-header{
+            color: #444;
+            height: 100%;
+            .logo{
+                width: 150px;
+                .icon-logo{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            nav{
+                margin-left:170px ;
+               > ul{
+                   > li{
+                        text-align: center;
+                        .title{
+                            color: black;
+                            position: relative;
+                            display: inline-block;
+                            padding: 33px 30px;
+                            &:hover{
+                                color: $primaryColor;
+                                
+                            }
+                            &.angle-down{
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    width: 7px;
+                                    height: 7px;
+                                    border: 1px solid black;
+                                    border-top: transparent;
+                                    border-right: transparent;
+                                    transform: rotate(-45deg);
+                                    right: 10px;
+                                    bottom: 40px;
+                                }
+                            }
+                        }
+                        .drop-down{
+                            display: none;
+                            z-index: 2;
+                            position: absolute;
+                            width: 200px;
+                            background: white;
+                            transform: translate(-13px,0px);
+                            &.heightDropdown-men{
+                                height: 300px;
+                            }
+                            &.heightDropdown-accessorie{
+                                height: 200px;
+                            }
+                            &.heightDropdown-women{
+                                height: 300px;
+                            }
+                            li{
+                                text-align: left;
+                                &:first-child{
+                                    padding-top: 10px;
+                                }
+                                a{
+                                    padding-left: 25px;
+                                    padding-top: 20px;
+                                    display: block;
+                                    &:hover{
+                                        color: $primaryColor;
+                                    }
+                                }
+                            }
+                        }
+                        &.block{
+                            position: relative;           
+                            &:hover{
+                                .drop-down{
+                                    display: block;
+                                    animation-name: drop-down;
+                                    animation-duration: 0.5s;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
+            .active{
+                a{
+                    color: black;
+                }
+                .user{
+                    padding-right: 50px;
+                    .icon-user{
+                        padding-right: 5px;
+                    }
+                    .login{
+                        padding-right: 13px;
+                        position: relative;
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            height: 17px;
+                            width: 1px;
+                            background-color: black;
+                            right: 3px;
+                            transform: rotate(30deg);
+                        }
+                    }
+                    .register{
+                        position: relative;
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            height: 20px;
+                            width: 1px;
+                            background:black;
+                            right: -25px;
+                            bottom: -1px;
+                        }
+                    }
+
+                }
+                .actions{
+                    .icon-bag{
+                        // padding-right: 30px;
+                    }
+                    .icon-search{
+                        padding-right: 30px;
+                    }
+
+                }
+            }
+
+        }
+    }
+
 }
 
 .slider {
