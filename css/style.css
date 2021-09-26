@@ -36,6 +36,10 @@
 	display: inline;
 }
 
+.block {
+	display: block;
+}
+
 .row {
 	display: flex;
 	margin: -15px;
@@ -48,6 +52,16 @@ p {
 	font-family: 'Red Hat Display', sans-serif;
 }
 
+.container-header {
+	width: 1750px;
+	margin: 0 auto;
+}
+
+.conatiner-main {
+	max-width: 1340px;
+	margin: 0 auto;
+}
+
 header .main_header {
 	font-size: 14px;
 	padding: 20px 0;
@@ -55,8 +69,6 @@ header .main_header {
 }
 
 header .main_header .container-header {
-	max-width: 1450px;
-	margin: 0 auto;
 	color: #444;
 }
 
@@ -97,42 +109,195 @@ header .main_header .container-header p a {
 	background: #ba933e;
 }
 
-.slider .owl-carousel.owl-theme:hover .owl-nav {
+header .main-nav {
+	height: 85px;
+}
+
+header .main-nav .container-header {
+	height: 100%;
+	color: #444;
+}
+
+header .main-nav .container-header .logo {
+	width: 150px;
+}
+
+header .main-nav .container-header .logo .icon-logo img {
+	width: 100%;
+}
+
+header .main-nav .container-header nav {
+	margin-left: 170px;
+}
+
+header .main-nav .container-header nav > ul > li {
+	text-align: center;
+}
+
+header .main-nav .container-header nav > ul > li .title {
+	position: relative;
+	display: inline-block;
+	padding: 33px 30px;
+	color: black;
+}
+
+header .main-nav .container-header nav > ul > li .title:hover {
+	color: #ba933e;
+}
+
+header .main-nav .container-header nav > ul > li .title.angle-down::after {
+	position: absolute;
+	right: 10px;
+	bottom: 40px;
+	width: 7px;
+	height: 7px;
+	content: '';
+	transform: rotate(-45deg);
+	border: 1px solid black;
+	border-top: transparent;
+	border-right: transparent;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down {
+	position: absolute;
+	z-index: 2;
+	display: none;
+	width: 200px;
+	transform: translate(-13px, 0px);
+	background: white;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down.heightDropdown-men {
+	height: 300px;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down.heightDropdown-accessorie {
+	height: 200px;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down.heightDropdown-women {
+	height: 300px;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down li {
+	text-align: left;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down li:first-child {
+	padding-top: 10px;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down li a {
+	display: block;
+	padding-top: 20px;
+	padding-left: 25px;
+}
+
+header .main-nav .container-header nav > ul > li .drop-down li a:hover {
+	color: #ba933e;
+}
+
+header .main-nav .container-header nav > ul > li.block {
+	position: relative;
+}
+
+header .main-nav .container-header nav > ul > li.block:hover .drop-down {
+	display: block;
+	-webkit-animation-name: drop-down;
+	animation-name: drop-down;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+}
+
+header .main-nav .container-header .active a {
+	color: black;
+}
+
+header .main-nav .container-header .active .user {
+	padding-right: 50px;
+}
+
+header .main-nav .container-header .active .user .icon-user {
+	padding-right: 5px;
+}
+
+header .main-nav .container-header .active .user .login {
+	position: relative;
+	padding-right: 13px;
+}
+
+header .main-nav .container-header .active .user .login:hover {
+	color: #ba933e;
+}
+
+header .main-nav .container-header .active .user .login::after {
+	position: absolute;
+	right: 3px;
+	width: 1px;
+	height: 17px;
+	content: '';
+	transform: rotate(30deg);
+	background-color: black;
+}
+
+header .main-nav .container-header .active .user .register {
+	position: relative;
+}
+
+header .main-nav .container-header .active .user .register:hover {
+	color: #ba933e;
+}
+
+header .main-nav .container-header .active .user .register::after {
+	position: absolute;
+	right: -25px;
+	bottom: -1px;
+	width: 1px;
+	height: 20px;
+	content: '';
+	background: black;
+}
+
+header .main-nav .container-header .active .actions .icon-search {
+	padding-right: 30px;
+}
+
+main .slider .owl-carousel.owl-theme:hover .owl-nav {
 	display: flex;
 }
 
-.slider .owl-carousel.owl-theme:hover .owl-nav button {
+main .slider .owl-carousel.owl-theme:hover .owl-nav button {
 	background: none;
 }
 
-.slider .item {
+main .slider .item {
 	font-family: 'Cabin Condensed', sans-serif;
 	position: relative;
 }
 
-.slider .item .content {
+main .slider .item .content {
 	position: absolute;
 	bottom: 50%;
 	left: 10%;
 	transform: translateY(50%);
 }
 
-.slider .item .content p {
+main .slider .item .content p {
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 10px;
 	color: #444;
 }
 
-.slider .item .content p span {
+main .slider .item .content p span {
 	color: #ba933e;
 }
 
-.slider .item .content h3 {
+main .slider .item .content h3 {
 	font-size: 40px;
 }
 
-.slider .item .content a {
+main .slider .item .content a {
 	font-size: 13px;
 	font-weight: bold;
 	display: inline-block;
@@ -144,15 +309,15 @@ header .main_header .container-header p a {
 	background: black;
 }
 
-.slider .item .content a:hover {
+main .slider .item .content a:hover {
 	background: #ba933e;
 }
 
-.slider img {
+main .slider img {
 	width: 100%;
 }
 
-.slider .owl-nav {
+main .slider .owl-nav {
 	font-size: 35px;
 	position: absolute;
 	top: 50%;
@@ -163,18 +328,18 @@ header .main_header .container-header p a {
 	justify-content: space-between;
 }
 
-.slider .owl-dot.active span {
+main .slider .owl-dot.active span {
 	width: 15px;
 	height: 15px;
 	border: 2px solid #ba933e;
 	background: whitesmoke !important;
 }
 
-.slider .owl-dot span {
+main .slider .owl-dot span {
 	background: #ba933e !important;
 }
 
-.slider .owl-dots {
+main .slider .owl-dots {
 	position: absolute;
 	right: 50%;
 	bottom: 20px;
@@ -182,16 +347,16 @@ header .main_header .container-header p a {
 	align-items: center;
 }
 
-.slider .owl-nav {
+main .slider .owl-nav {
 	display: none;
 	transition: all .3s;
 }
 
-.slider .owl-nav button {
+main .slider .owl-nav button {
 	background: none;
 }
 
-.slider .owl-prev span {
+main .slider .owl-prev span {
 	font-size: 15px;
 	display: flex;
 	width: 45px;
@@ -205,12 +370,12 @@ header .main_header .container-header p a {
 	align-items: center;
 }
 
-.slider .owl-prev span:hover {
+main .slider .owl-prev span:hover {
 	border: 1px solid #ba933e;
 	background: #ba933e;
 }
 
-.slider .owl-next span {
+main .slider .owl-next span {
 	font-size: 15px;
 	display: flex;
 	width: 45px;
@@ -224,37 +389,32 @@ header .main_header .container-header p a {
 	align-items: center;
 }
 
-.slider .owl-next span:hover {
+main .slider .owl-next span:hover {
 	border: 1px solid #ba933e;
 	background: #ba933e;
 }
 
-.main-container {
-	max-width: 1340px;
-	margin: 0 auto;
-}
-
-.banner {
+main .banner {
 	margin: 80px auto;
 }
 
-.banner .main-container #hover-banner .item {
+main .banner .main-container #hover-banner .item {
 	position: relative;
 	display: inline-block;
 	height: 300px;
 }
 
-.banner .main-container #hover-banner .item:hover::after {
+main .banner .main-container #hover-banner .item:hover::after {
 	transform: scaleX(0);
 	opacity: 1;
 }
 
-.banner .main-container #hover-banner .item:hover::before {
+main .banner .main-container #hover-banner .item:hover::before {
 	transform: scaleY(0);
 	opacity: 1;
 }
 
-.banner .main-container #hover-banner .item::after {
+main .banner .main-container #hover-banner .item::after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -266,7 +426,7 @@ header .main_header .container-header p a {
 	background: rgba(255, 255, 255, .3);
 }
 
-.banner .main-container #hover-banner .item::before {
+main .banner .main-container #hover-banner .item::before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -278,47 +438,47 @@ header .main_header .container-header p a {
 	background: rgba(255, 255, 255, .3);
 }
 
-.banner .main-container .item {
+main .banner .main-container .item {
 	font-family: 'Red Hat Display', sans-serif;
 	position: relative;
 }
 
-.banner .main-container .item img {
+main .banner .main-container .item img {
 	width: 100%;
 	height: 300px;
 }
 
-.banner .main-container .item .content {
+main .banner .main-container .item .content {
 	font-weight: bold;
 	position: absolute;
 	top: 55px;
 	left: 40px;
 }
 
-.banner .main-container .item .content a {
+main .banner .main-container .item .content a {
 	font-family: 'Red Hat Display', sans-serif;
 	font-size: 20px;
 	color: black;
 }
 
-.banner .main-container .item .content h4 {
+main .banner .main-container .item .content h4 {
 	margin-bottom: 5px;
 }
 
-.banner .main-container .item .content span {
+main .banner .main-container .item .content span {
 	font-size: 15px;
 	color: #ba933e;
 }
 
-.banner-collection .img {
+main .banner-collection .img {
 	position: relative;
 }
 
-.banner-collection .img img {
+main .banner-collection .img img {
 	width: 100%;
 }
 
-.banner-collection .img .content {
+main .banner-collection .img .content {
 	position: absolute;
 	right: 50%;
 	bottom: 50%;
@@ -327,22 +487,22 @@ header .main_header .container-header p a {
 	color: #444;
 }
 
-.banner-collection .img .content #price {
+main .banner-collection .img .content #price {
 	font-size: 25px;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 
-.banner-collection .img .content #price span {
+main .banner-collection .img .content #price span {
 	color: #ba933e;
 }
 
-.banner-collection .img .content h2 {
+main .banner-collection .img .content h2 {
 	font-size: 50px;
 	color: black;
 }
 
-.banner-collection .img .content a {
+main .banner-collection .img .content a {
 	font-family: 'Red Hat Display', sans-serif;
 	font-size: 18px;
 	font-weight: bold;
@@ -355,16 +515,16 @@ header .main_header .container-header p a {
 	background: #000;
 }
 
-.banner-collection .img .content a:hover {
+main .banner-collection .img .content a:hover {
 	background: #ba933e;
 }
 
-.banner-collection .img .content i {
+main .banner-collection .img .content i {
 	font-size: 15px;
 	margin-left: 15px;
 }
 
-.subcribe {
+main .subcribe {
 	height: 500px;
 	background-image: url(../images/bg-newsleter-fashion-1.jpg);
 	background-repeat: no-repeat;
@@ -373,26 +533,43 @@ header .main_header .container-header p a {
 	background-size: cover;
 }
 
-.subcribe .form {
+main .subcribe .form {
 	width: 870px;
 	height: 220px;
 	border-radius: 2px;
 	background: rgba(255, 255, 255, .8);
 }
 
-.subcribe .form .content p {
+main .subcribe .form .content p {
 	margin: 10px auto;
 }
 
-.subcribe .form .content h3 {
+main .subcribe .form .content h3 {
 	font-size: 35px;
 }
 
-.subcribe .form .content .search input {
+main .subcribe .form .content .search input {
 	padding: 10px 100px 10px 5px;
 	border: 2px solid #e5e5e5;
 	border-radius: 3px;
 	flex-grow: 2;
+}
+
+main .followIG .container-main {
+	height: 400px;
+}
+
+main .followIG .container-main .title {
+	margin-top: 70px;
+	text-align: center;
+}
+
+main .followIG .container-main .title h3 {
+	font-size: 30px;
+}
+
+main .followIG .container-main .title span {
+	margin-top: 10px;
 }
 
 @media (min-width: 1201px) {
@@ -711,6 +888,30 @@ header .main_header .container-header p a {
 .row .col-xs-12 {
 	width: 100%;
 	padding: 15px;
+}
+
+}
+
+@-webkit-keyframes drop-down {
+
+from {
+	transform: translate(-13px, 50px);
+}
+
+to {
+	transform: translate(-13px, 0px);
+}
+
+}
+
+@keyframes drop-down {
+
+from {
+	transform: translate(-13px, 50px);
+}
+
+to {
+	transform: translate(-13px, 0px);
 }
 
 }

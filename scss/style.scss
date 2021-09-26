@@ -11,11 +11,18 @@ html,
 p {
     font-family: 'Red Hat Display', sans-serif;
 }
+.container-header{
+    width: 1750px;
+    margin: 0 auto;
+}
+.conatiner-main{
+    max-width: 1340px;
+    margin: 0 auto;
+}
 
 $primaryColor: #ba933e;
 $secondColor: whitesmoke;
 $primaryFont: 'Red Hat Display', sans-serif;
-
 
 header {
     .main_header {
@@ -24,8 +31,6 @@ header {
         font-size: 14px;
 
         .container-header {
-            max-width: 1450px;
-            margin: 0 auto;
             color: #444;
             ul{
                 li,a,i{
@@ -95,7 +100,7 @@ header {
                             color: black;
                             position: relative;
                             display: inline-block;
-                            padding: 33px 30px;
+                            padding: 33px 30px;         
                             &:hover{
                                 color: $primaryColor;
                                 
@@ -218,6 +223,8 @@ header {
     }
 
 }
+
+main{
 
 .slider {
     .owl-carousel.owl-theme {
@@ -366,10 +373,7 @@ header {
     
 }
 
-.main-container{
-    max-width: 1340px;
-    margin: 0 auto;
-}
+
 
 .banner{
     margin: 80px auto;
@@ -535,3 +539,24 @@ header {
     }
 }
 
+    .followIG{
+        .container-main{
+            height: 400px;
+
+            .title{
+                margin-top:70px;
+                text-align: center;
+                h3{
+                    font-size: 30px;
+                }
+                span{
+                    margin-top: 10px;
+                }
+            }
+
+
+
+        }
+    }
+
+}
