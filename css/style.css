@@ -53,11 +53,11 @@ p {
 }
 
 .container-header {
-	width: 1750px;
+	width: 1450px;
 	margin: 0 auto;
 }
 
-.conatiner-main {
+.container-main {
 	max-width: 1340px;
 	margin: 0 auto;
 }
@@ -398,23 +398,23 @@ main .banner {
 	margin: 80px auto;
 }
 
-main .banner .main-container #hover-banner .item {
+main .banner .container-main #hover-banner .item {
 	position: relative;
 	display: inline-block;
 	height: 300px;
 }
 
-main .banner .main-container #hover-banner .item:hover::after {
+main .banner .container-main #hover-banner .item:hover::after {
 	transform: scaleX(0);
 	opacity: 1;
 }
 
-main .banner .main-container #hover-banner .item:hover::before {
+main .banner .container-main #hover-banner .item:hover::before {
 	transform: scaleY(0);
 	opacity: 1;
 }
 
-main .banner .main-container #hover-banner .item::after {
+main .banner .container-main #hover-banner .item::after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -426,7 +426,7 @@ main .banner .main-container #hover-banner .item::after {
 	background: rgba(255, 255, 255, .3);
 }
 
-main .banner .main-container #hover-banner .item::before {
+main .banner .container-main #hover-banner .item::before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -438,34 +438,34 @@ main .banner .main-container #hover-banner .item::before {
 	background: rgba(255, 255, 255, .3);
 }
 
-main .banner .main-container .item {
+main .banner .container-main .item {
 	font-family: 'Red Hat Display', sans-serif;
 	position: relative;
 }
 
-main .banner .main-container .item img {
+main .banner .container-main .item img {
 	width: 100%;
 	height: 300px;
 }
 
-main .banner .main-container .item .content {
+main .banner .container-main .item .content {
 	font-weight: bold;
 	position: absolute;
 	top: 55px;
 	left: 40px;
 }
 
-main .banner .main-container .item .content a {
+main .banner .container-main .item .content a {
 	font-family: 'Red Hat Display', sans-serif;
 	font-size: 20px;
 	color: black;
 }
 
-main .banner .main-container .item .content h4 {
+main .banner .container-main .item .content h4 {
 	margin-bottom: 5px;
 }
 
-main .banner .main-container .item .content span {
+main .banner .container-main .item .content span {
 	font-size: 15px;
 	color: #ba933e;
 }
@@ -476,6 +476,7 @@ main .banner-collection .img {
 
 main .banner-collection .img img {
 	width: 100%;
+	height: 650px;
 }
 
 main .banner-collection .img .content {
@@ -534,25 +535,50 @@ main .subcribe {
 }
 
 main .subcribe .form {
+	font-family: 'Red Hat Display', sans-serif;
 	width: 870px;
-	height: 220px;
+	height: 320px;
 	border-radius: 2px;
 	background: rgba(255, 255, 255, .8);
 }
 
+main .subcribe .form .content {
+	width: 80%;
+	text-align: center;
+}
+
 main .subcribe .form .content p {
-	margin: 10px auto;
+	margin: 20px auto;
 }
 
 main .subcribe .form .content h3 {
 	font-size: 35px;
 }
 
+main .subcribe .form .content .search {
+	display: block;
+}
+
 main .subcribe .form .content .search input {
+	width: 500px;
 	padding: 10px 100px 10px 5px;
 	border: 2px solid #e5e5e5;
 	border-radius: 3px;
-	flex-grow: 2;
+}
+
+main .subcribe .form .content .search a {
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 30px;
+	transition: all .3s;
+	color: white;
+	border-radius: 5px;
+	background: #000;
+}
+
+main .subcribe .form .content .search a:hover {
+	background: #ba933e;
 }
 
 main .followIG .container-main {
